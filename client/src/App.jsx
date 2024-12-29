@@ -21,14 +21,14 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <hr />
-      <img src="/assets/img.png" style={{ height: "150px", borderRadius: "50px"}}></img>
+    <div style={{ textAlign: "center", marginTop: "40px", marginBottom: "20px"}}>
+      <img src="/assets/img.png" style={{ height: "150px", width: "150px", borderRadius: "50%"}}></img>
       <hr></hr>
       <h1 style={{ fontFamily: "monospace", fontWeight: "lighter" }}>
-        Web Page Summarizer
+        Web Monkey Summarizer
       </h1>
-      <hr />
+      <p style={{ fontFamily: "monospace", fontWeight: "lighter" }}>Summarizer webpages by entering URL...</p>
+      <hr></hr>
       <br />
       <br />
       <form onSubmit={handleSubmit}>
@@ -41,7 +41,10 @@ function App() {
             padding: "10px",
             fontSize: "12px",
             width: "240px",
-            borderRadius: "10px",
+            borderRadius: "16px",
+            background: "black",
+            color: "white",
+            border: "2px solid white"
           }}
           disabled={loading} // Disable input during loading
         />
@@ -52,8 +55,10 @@ function App() {
             padding: "10px",
             fontSize: "12px",
             cursor: "select",
-            borderRadius: "10px",
-            backgroundColor: loading ? "#ccc" : "", // Visual feedback for button
+            borderRadius: "16px",
+            backgroundColor: loading ? "black" : "",
+            color: loading ? "white" : "",
+            border: "2px solid white"
           }}
           disabled={loading} // Disable button during loading
         >
@@ -63,8 +68,8 @@ function App() {
       {responseData && (
         <div
           style={{
-            margin: "50px 50px",
-            textAlign: "left",
+            margin: "50px",
+            textAlign: "justify",
             fontFamily: "'Lucida Console', 'Courier New', monospace",
             fontSize: "16px",
           }}
