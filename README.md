@@ -1,4 +1,5 @@
 # Web Monkey Summarizer
+
 <hr>
 <img src="./screenshots/img 2.png">
 <br>
